@@ -49,16 +49,23 @@ operators = [
     (r'h5', 'h5'),
     (r'h6', 'h6'),
     (r'p', 'p'),
+    (r'img', 'img'),
+    (r'src', 'src'),
+    (r'=', '='),
+    (r'"' ,'"'),
+    (r''', '''),
     (r'script', 'script'),
     (r'title', 'title'),
     (r'body', 'body'),
     (r'head', 'head'),
     (r'html', 'html'),
+    (r'div', 'div'),
     (r'<', '<'),
     (r'>', '>'),
     (r'/', '/'),
 
     # Kata Random
+    (r'\S*(?=")', 'e'),
     (r'\S*(?=<)', 'e'),
     (r'\S*', 'e'),
 ]
