@@ -40,6 +40,7 @@ operators = [
     (r'[ \t]+', None),
     (r'[\n]+[ \t]*\'\'\'[(?!(\'\'\'))\w\W]*\'\'\'',  None),
     (r'[\n]+[ \t]*\"\"\"[(?!(\"\"\"))\w\W]*\"\"\"',  None),
+    (r'p\S*' , 'e'),
    
     (r'[\n]', 'nextLine'),
     (r'h1', 'h1'),
@@ -67,7 +68,8 @@ operators = [
     # Kata Random
     (r'\S*(?=")', 'e'),
     (r'\S*(?=<)', 'e'),
-    (r'\S*', 'e'),
+    (r'\S*' , 'e')
+    
 ]
 
 def createToken(text):
