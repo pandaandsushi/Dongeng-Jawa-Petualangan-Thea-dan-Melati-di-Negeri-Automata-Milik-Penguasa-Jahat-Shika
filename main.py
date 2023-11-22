@@ -4,6 +4,14 @@ import error as er
 import argparse
 import time
 from colorama import Fore, Style
+from pyfiglet import Figlet
+
+def printopening():
+    custom_fig = Figlet(font='starwars')  # Ganti 'block' dengan jenis huruf yang diinginkan
+    logo_text = custom_fig.renderText('SUGENG RAWUH')
+
+    print(logo_text)
+
 
 # buat run tulis ini xnya ganti nama file apa aja bebas
 #  python main.py test/x.html
@@ -23,42 +31,52 @@ class PDA:
         currentStackSymbol = initStackSymbol
         currentState = initialState
         nextstack=initStackSymbol
+        end = False
 
         print('State\tInput\tStack\tMove')
         print('{}\t {}\t {}\t ({}, {})'.format(currentState, '_', 'Z', currentStackSymbol, currentStackSymbol))
-        for char in inputString:
+        for i in range(len(inputString)):
             ada = False
-            if char=='nextLine':
+            if inputString[i]=='nextLine':
                 line+=1
-                prevchar = char
+                prevchar = inputString[i]
             else:
                 for production in productions:
-                    if ((production[0] == currentState) and (production[1] == char) and (production[2] == currentStackSymbol)):
+                    if ((production[0] == currentState) and (production[1] == inputString[i]) and (production[2] == currentStackSymbol)):
                         currentState = production[3]
                         nextstack = production[4]
                         ada=True
                 if(ada==True):
-                    prevchar = char
+                    prevchar = inputString[i]
                     previousStackSymbol = currentStackSymbol
                     currentStackSymbol = nextstack
-                    print('{}\t {}\t {}\t ({}, {})'.format(currentState, char, previousStackSymbol, previousStackSymbol, nextstack))
+                    print('{}\t {}\t {}\t ({}, {})'.format(currentState, inputString[i], previousStackSymbol, previousStackSymbol, nextstack))
                     #time.sleep(2)
                 else:
-                    currentchar = char
+                    currentchar = inputString[i]
                     if(prevchar == currentchar):
                         currentchar = prevchar
                     if(prevchar=='nextLine'):
                         line = line-1
-                        char = 'e'
+                        inputString[i] = 'e'
                     break
-                
-        if(currentStackSymbol in finalStates):
+
+                if i==len(inputString)-1:
+                    end = True
+
+        if(currentStackSymbol in finalStates and end):
             accepted = True
         
         return accepted, line, currentchar
 
 def main():
-    # argparse
+    print('Pada suatu hari....')
+    time.sleep(1)
+    print('Thea dan Melati membuat sebuah program HTML untuk mengalahkan sang penguasa jahat Shika')
+    time.sleep(1)
+    print('Akankah mereka akan menang??')
+    printopening()
+
     parser = argparse.ArgumentParser()
     parser.add_argument('file', type=argparse.FileType('r'))
     args = parser.parse_args()
@@ -73,7 +91,7 @@ def main():
     print('Automata File Successfully Read')
   
     print('Loading Details from Automata File: ')
-    #time.sleep(3)
+    
     parsedLines = fh.parseFile(lines)
     print('States: ', parsedLines['states'])
     print('Input Symbols: ', parsedLines['input_symbols'])
