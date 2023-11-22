@@ -37,7 +37,6 @@ def printerror(filename, position, errorline):
             line += 1
         flag = None
         if line == errorline and pos == position:
-            print("SYNTAX ERROR !!!")
             print(f'Error Expression at line {line}: {text[pos:].splitlines()[0]}')
 
         pos+=1

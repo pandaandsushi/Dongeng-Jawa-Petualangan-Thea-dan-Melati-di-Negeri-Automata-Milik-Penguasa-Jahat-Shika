@@ -7,11 +7,28 @@ from colorama import Fore, Style
 from pyfiglet import Figlet
 
 def printopening():
-    custom_fig = Figlet(font='starwars')  # Ganti 'block' dengan jenis huruf yang diinginkan
+    custom_fig = Figlet(font='starwars') 
     logo_text = custom_fig.renderText('SUGENG RAWUH')
 
+    print(Fore.YELLOW)
     print(logo_text)
+    print(Style.RESET_ALL)
 
+def printtrue():
+    custom_fig = Figlet(font='starwars') 
+    logo_text = custom_fig.renderText('SELAMET WES BENER')
+
+    print(Fore.GREEN)
+    print(logo_text)
+    print(Style.RESET_ALL)
+
+def printfalse():
+    custom_fig = Figlet(font='starwars') 
+    logo_text = custom_fig.renderText('WADUH SALAH')
+
+    print(Fore.RED)
+    print(logo_text)
+    print(Style.RESET_ALL)
 
 # buat run tulis ini xnya ganti nama file apa aja bebas
 #  python main.py test/x.html
@@ -108,10 +125,11 @@ def main():
 
     accepted, line, currentchar = pda.compute(lexer, parsedLines)
     if not accepted:
+        printfalse()
         position = er.searchposition(filename,currentchar,line)
         er.printerror(filename,position,line)
     else:
-        print("yeyy selamat udah bener")
+        printtrue()
 
 if __name__ == '__main__':
     main()
