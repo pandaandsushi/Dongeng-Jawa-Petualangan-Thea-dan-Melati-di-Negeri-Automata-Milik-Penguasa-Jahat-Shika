@@ -72,6 +72,8 @@ operators = [
     (r'src(?==)' , 'src'),
     (r'src\S*(?=<)' , 'e'),
     (r'src\S*(?=")' , 'e'),
+    (r'script' , 'script'),
+    (r'(?=")script(?=")' , 'script'),
     (r'script(?=>)' , 'script'),
     (r'script\S*(?=<)' , 'e'),
     (r'script\S*(?=")' , 'e'),
