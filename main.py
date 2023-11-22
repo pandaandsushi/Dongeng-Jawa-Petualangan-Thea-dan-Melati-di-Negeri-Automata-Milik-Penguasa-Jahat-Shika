@@ -122,9 +122,6 @@ def main():
     print('Initial State: ', parsedLines['initial_state'])
     print('Initial Stack Symbol: ', parsedLines['initial_stack'])
     print('Final States: ', parsedLines['final_states'])
-    print('Productions List:')
-    for production in parsedLines['productions']:
-        print('\t', production)
 
     print('Details loaded')
     print('Computing the Transition Table:')

@@ -570,6 +570,22 @@ Q5 petik2 ZADAAFAAamj Q5 ZADAAFAAamjk
 Q5 e ZADAAFAAamjk Q5 ZADAAFAAamjk (random)
 Q5 petik2 ZADAAFAAamjk Q4 ZADAAFAAa (<html><head><body><img)
 Q4 > ZADAAFAAaijkk Q3 ZADAAFA(<html><head><body>)
+Q3 button ZADAAFAA Q4 ZADAAFAAb (<html><head><body><button)
+Q4 type ZADAAFAAb Q4 ZADAAFAAbz (<html><head><body><button type)
+Q4 = ZADAAFAAbz Q4  ZADAAFAAbzj (<html><head><body><button type= )
+Q4 petik2 ZADAAFAAbzj Q4 ZADAAFAAbzjk (<html><head><body><button type=)
+Q4 button ZADAAFAAbzjk Q4 ZADAAFAAbzjkb (<html><head><body><button type=)
+Q4 submit ZADAAFAAbzjk Q4 ZADAAFAAbzjko(<html><head><body><button type=)
+Q4 reset ZADAAFAAbzjk Q4 ZADAAFAAbzjkp (<html><head><body><button type=)
+Q4 petik2 ZADAAFAAbzjkb Q3 ZADAAFAAb (<html><head><body><button type=)
+Q4 petik2 ZADAAFAAbzjkp Q3 ZADAAFAAb (<html><head><body><button type)
+Q4 petik2 ZADAAFAAbzjko Q3 ZADAAFAAb (<html><head><body><button type=)
+Q3 > ZADAAFAAb Q4 ZADAAFAAbA (<html><head><body><button>)
+Q4 e ZADAAFAAbA Q4 ZADAAFAAbA
+Q4 < ZADAAFAAbA Q4 ZADAAFAAbAA
+Q4 / ZADAAFAAbAA Q4 ZADAAFAAb
+Q4 button ZADAAFAAb Q4 ZADAAFAA
+Q4 > ZADAAFAA Q3 ZADAAFA
 Q4 img ZADAAFAAXAA Q5 ZADAAFAAXAAa (<html><head><body><img)
 Q5 src ZADAAFAAXAAa Q5 ZADAAFAAXAAai (<html><head><body><img src)
 Q5 = ZADAAFAAXAAai Q5  ZADAAFAAXAAaij (<html><head><body><img src = )
