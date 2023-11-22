@@ -603,3 +603,18 @@ Q6 petik2 ZADAAFAAXAAamj Q6 ZADAAFAAXAAamjk (<html><head><body><img alt=)
 Q6 e ZADAAFAAXAAamjk Q6 ZADAAFAAXAAamjk (random)
 Q6 petik2 ZADAAFAAXAAamjk Q5 ZADAAFAAXAAa (<html><head><body><img)
 Q5 > ZADAAFAAXAAaijkk Q4 ZADAAFAAXA (<html><head><body>)
+Q3 input ZADAAFAA Q4 ZADAAFAAd (<html><body><input)
+Q4 type ZADAAFAAd Q5 ZADAAFAAdn
+Q5 = ZADAAFAAdn Q5 ZADAAFAAdnj 
+Q5 petik2 ZADAAFAAdnj Q5 ZADAAFAAdnjk
+Q5 text ZADAAFAAdnjk Q5 ZADAAFAAdnjkq
+Q5 password ZADAAFAAdnjk Q5 ZADAAFAAdnjkr
+Q5 email ZADAAFAAdnjk Q5 ZADAAFAAdnjks
+Q5 number ZADAAFAAdnjk Q5 ZADAAFAAdnjkt
+Q5 checkbox ZADAAFAAdnjk Q5 ZADAAFAAdnjku
+Q5 petik2 ZADAAFAAdnjkq Q4 ZADAAFAAd
+Q5 petik2 ZADAAFAAdnjkr Q4 ZADAAFAAd
+Q5 petik2 ZADAAFAAdnjks Q4 ZADAAFAAd
+Q5 petik2 ZADAAFAAdnjkt Q4 ZADAAFAAd 
+Q5 petik2 ZADAAFAAdnjku Q4 ZADAAFAAd
+Q4 > ZADAAFAAd Q3 ZADAAFA
