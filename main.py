@@ -83,7 +83,6 @@ class PDA:
 
         if end:
             if(currentStackSymbol.upper() in finalStates):
-                print(end)
                 accepted = True
         
         return accepted, line, currentchar
