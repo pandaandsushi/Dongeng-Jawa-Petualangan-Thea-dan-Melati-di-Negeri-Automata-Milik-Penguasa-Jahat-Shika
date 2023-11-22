@@ -78,11 +78,13 @@ class PDA:
                         inputString[i] = 'e'
                     break
 
-                if i==len(inputString)-1:
-                    end = True
+            if i==(len(inputString)-1):
+                end = True
 
-        if(currentStackSymbol in finalStates and end):
-            accepted = True
+        if end:
+            if(currentStackSymbol.upper() in finalStates):
+                print(end)
+                accepted = True
         
         return accepted, line, currentchar
 
