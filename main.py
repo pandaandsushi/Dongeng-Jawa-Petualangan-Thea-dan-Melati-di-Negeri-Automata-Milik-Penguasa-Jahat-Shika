@@ -31,7 +31,7 @@ def printfalse():
     print(Style.RESET_ALL)
 
 # buat run tulis ini xnya ganti nama file apa aja bebas
-#  python main.py test/x.html
+#  python main.py pda.txt x.html
 
 class PDA:
     def compute(self, inputString, parsedLines):
@@ -96,15 +96,20 @@ def main():
     printopening()
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('file', type=argparse.FileType('r'))
+    parser.add_argument('txt_file', type=str)
+    parser.add_argument('html_file', type=str)
     args = parser.parse_args()
-    filename = args.file.name
 
-    lexer = reg.createToken(filename)
+    html_filename = 'test/' + args.html_file
+    txt_filename = args.txt_file
+
+    lexer = reg.createToken(html_filename)
     print(lexer)
+
     fh = FileHandler()
     pda = PDA()
-    lines = fh.readFile('pda.txt')
+    
+    lines = fh.readFile(txt_filename)
     print('Reading Automata File')
     print('Automata File Successfully Read')
   
@@ -127,8 +132,8 @@ def main():
     accepted, line, currentchar = pda.compute(lexer, parsedLines)
     if not accepted:
         printfalse()
-        position = er.searchposition(filename,currentchar,line)
-        er.printerror(filename,position,line)
+        position = er.searchposition(html_filename,currentchar,line)
+        er.printerror(html_filename,position,line)
     else:
         printtrue()
 
