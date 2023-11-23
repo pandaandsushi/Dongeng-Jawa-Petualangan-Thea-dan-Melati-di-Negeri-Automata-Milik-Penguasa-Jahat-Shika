@@ -62,9 +62,11 @@ operators = [
     (r'<p', lambda m: ['<', 'p'] ),
     (r'</p', lambda m: ['<', '/' ,'p'] ),
     (r'<img', lambda m: ['<', 'img'] ),
-    (r'<h3', lambda m: ['<', 'h3'] ),
+    (r'<link', lambda m: ['<', 'link'] ),
     (r'<a', lambda m: ['<', 'a'] ),
     (r'</a', lambda m: ['<', '/' ,'a'] ),
+    (r'rel =', lambda m: ['rel','='] ),
+    (r'rel=', lambda m: ['rel','='] ),
     (r'href =', lambda m: ['href','='] ),
     (r'href=', lambda m: ['href','='] ),
     (r'src =', lambda m: ['src','='] ),
@@ -158,6 +160,7 @@ operators = [
     (r'/', '/'),
 
     # Kata Random
+    (r'\S*(?=\')', 'e'),
     (r'\S*(?=")', 'e'),
     (r'\S*(?=<)', 'e'),
     (r'\S*' , 'e')
