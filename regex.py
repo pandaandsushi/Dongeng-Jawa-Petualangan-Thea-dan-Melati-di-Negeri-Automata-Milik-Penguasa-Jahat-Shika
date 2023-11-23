@@ -23,9 +23,13 @@ def comparing(text, operators):
             if flag:
                 if tag:
                     token = tag
-                    list.append(token)
+                    if callable(token):
+                        modified_token = token(flag)
+                        list.extend(modified_token)
+                    else:
+                        list.append(token)
                 break
-
+        
         if not flag:
             print("SYNTAX ERROR !!!")
             print(f'Error Expression at line {line}: {text[pos:].splitlines()[0]}')
@@ -34,71 +38,55 @@ def comparing(text, operators):
             pos = flag.end(0)
 
     return list
-
+    
 operators = [
 
     (r'[ \t]+', None),
     (r'[\n]+[ \t]*\'\'\'[(?!(\'\'\'))\w\W]*\'\'\'',  None),
     (r'[\n]+[ \t]*\"\"\"[(?!(\"\"\"))\w\W]*\"\"\"',  None),
 
-    (r'h1(?=>)' , 'h1'),
-    (r'h1\S*(?=<)' , 'e'),
-    (r'h1\S*(?=")' , 'e'),
-    (r'h2(?=>)' , 'h2'),
-    (r'h2\S*(?=<)' , 'e'),
-    (r'h2\S*(?=")' , 'e'),
-    (r'h3(?=>)' , 'h3'),
-    (r'h3\S*(?=<)' , 'e'),
-    (r'h3\S*(?=")' , 'e'),
-    (r'h4(?=>)' , 'h4'),
-    (r'h4\S*(?=<)' , 'e'),
-    (r'h4\S*(?=")' , 'e'),
-    (r'h5(?=>)' , 'h5'),
-    (r'h5\S*(?=<)' , 'e'),
-    (r'h5\S*(?=")' , 'e'),
-    (r'h6(?=>)' , 'h6'),
-    (r'h6\S*(?=<)' , 'e'),
-    (r'h6\S*(?=")' , 'e'),
-    (r'em(?=>)' , 'em'),
-    (r'em\S*(?=<)' , 'e'),
-    (r'em\S*(?=")' , 'e'),
-    (r'p(?=>)' , 'p'),
-    (r'p\S*(?=<)' , 'e'),
-    (r'p\S*(?=")' , 'e'),
-    (r'img' , 'img'),
-    (r'img(?=>)' , 'img'),
-    (r'img\S*(?=<)' , 'e'),
-    (r'img\S*(?=")' , 'e'),
-    (r'src(?==)' , 'src'),
+    (r'<h1', lambda m: ['<', 'h1'] ),
+    (r'</h1', lambda m: ['<', '/' ,'h1'] ),
+    (r'<h2', lambda m: ['<', 'h2'] ),
+    (r'</h2', lambda m: ['<', '/' ,'h2'] ),
+    (r'<h3', lambda m: ['<', 'h3'] ),
+    (r'</h3', lambda m: ['<', '/' ,'h3'] ),
+    (r'<h4', lambda m: ['<', 'h4'] ),
+    (r'</h4', lambda m: ['<', '/' ,'h4'] ),
+    (r'<h5', lambda m: ['<', 'h5'] ),
+    (r'</h5', lambda m: ['<', '/' ,'h5'] ),
+    (r'<h6', lambda m: ['<', 'h6'] ),
+    (r'</h6', lambda m: ['<', '/' ,'h6'] ),
+    (r'<em', lambda m: ['<', 'em'] ),
+    (r'</em', lambda m: ['<', '/' ,'em'] ),
+    (r'<p', lambda m: ['<', 'p'] ),
+    (r'</p', lambda m: ['<', '/' ,'p'] ),
+    (r'<img', lambda m: ['<', 'img'] ),
+    (r'<h3', lambda m: ['<', 'h3'] ),
+    (r'src =', lambda m: ['src','='] ),
+    (r'src=', lambda m: ['src','='] ),
     (r'src\S*(?=<)' , 'e'),
     (r'src\S*(?=")' , 'e'),
-    (r'script' , 'script'),
-    (r'script(?=>)' , 'script'),
-    (r'script\S*(?=<)' , 'e'),
-    (r'script\S*(?=")' , 'e'),
-    (r'title(?=>)' , 'title'),
-    (r'title\S*(?=<)' , 'e'),
-    (r'title\S*(?=")' , 'e'),
-    (r'body(?=>)' , 'body'),
-    (r'body\S*(?=<)' , 'e'),
-    (r'body\S*(?=")' , 'e'),
-    (r'head(?=>)' , 'head'),
-    (r'head\S*(?=<)' , 'e'),
-    (r'head\S*(?=")' , 'e'),
-    (r'html(?=>)' , 'html'),
-    (r'html\S*(?=<)' , 'e'),
-    (r'html\S*(?=")' , 'e'),
-    (r'div(?=>)' , 'div'),
-    (r'div\S*(?=<)' , 'e'),
-    (r'div\S*(?=")' , 'e'),
+    (r'<script', lambda m: ['<', 'script'] ),
+    (r'</script', lambda m: ['<', '/' ,'script'] ),
+    (r'<title', lambda m: ['<', 'title'] ),
+    (r'</title', lambda m: ['<', '/' ,'title'] ),
+    (r'<body', lambda m: ['<', 'body'] ),
+    (r'</body', lambda m: ['<', '/' ,'body'] ),
+    (r'<head', lambda m: ['<', 'head'] ),
+    (r'</head', lambda m: ['<', '/' ,'head'] ),
+    (r'<html', lambda m: ['<', 'html'] ),
+    (r'</html', lambda m: ['<', '/' ,'html'] ),
+    (r'<div', lambda m: ['<', 'div'] ),
+    (r'</div', lambda m: ['<', '/' ,'div'] ),
     (r'alt(?==)' , 'alt'),
     (r'alt\S*(?=<)' , 'e'),
     (r'alt\S*(?=")' , 'e'),
     (r'type(?==)' , 'type'),
     (r'type\S*(?=<)' , 'e'),
     (r'type\S*(?=")' , 'e'),
-    (r'button' , 'button'),
-    (r'button(?=")' , 'button'),
+    (r'<button', lambda m: ['<', 'button'] ),
+    (r'"button"', lambda m: ['petik2', 'button', 'petik2'] ),
     (r'button\S*(?=<)' , 'e'),
     (r'button\S*(?=")' , 'e'),
     (r'submit(?=")' , 'submit'),
@@ -107,8 +95,7 @@ operators = [
     (r'reset(?=")' , 'reset'),
     (r'reset\S*(?=<)' , 'e'),
     (r'reset\S*(?=")' , 'e'),
-    (r'input' , 'input'),
-    (r'(?=")input(?=")' , 'input'),
+    (r'<input', lambda m: ['<', 'input'] ),
     (r'input\S*(?=<)' , 'e'),
     (r'input\S*(?=")' , 'e'),
     (r'text(?=")' , 'text'),
