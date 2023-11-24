@@ -1,0 +1,14 @@
+Q0 Q1 Q2 Q3 Q4 Q5
+< > / html head body title script h1 h2 h3 h4 h5 h6 div Img link br hr input
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h 
+Q0
+Z 
+Q0 
+Q0 h Z Q0 hZ
+Q0 > h Q1 >h
+Q1 < > Q1 e
+Q1 /h h Q0 e
+Q1 hd Z Q hZ
+Q1 > h Q2 >h
+Q2 < > Q2 e
+Q2 /hd h Q2 e
