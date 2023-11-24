@@ -51,6 +51,8 @@ operators = [
     (r'/head>', '/head' ),
     (r'<body', 'body' ),
     (r'/body>', '/body' ),
+    (r'<title', 'title' ),
+    (r'/title>', '/title' ),
     (r'<h1', 'h1' ),
     (r'/h1>', '/h1' ),
     (r'<h2', 'h2' ),
