@@ -97,6 +97,7 @@ operators = [
     (r'</th', lambda m: ['<', '/' ,'th'] ),
     (r'<form', lambda m: ['<', 'form'] ),
     (r'</form', lambda m: ['<', '/' ,'form'] ),
+    (r'<!', lambda m: ['<', '!'] ),
     (r'alt(?==)' , 'alt'),
     (r'alt\S*(?=<)' , 'e'),
     (r'alt\S*(?=")' , 'e'),
@@ -155,6 +156,7 @@ operators = [
    
     (r'[\n]', 'nextLine'),
     (r'=', '='),
+    (r'-', '-'),
     (r'"' ,'petik2'),
     (r'\'', 'petik'),
     (r'<', '<'),
