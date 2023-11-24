@@ -56,3 +56,11 @@ Q3 > p Q4 >H
 Q4 < > Q4 e
 Q4 e > Q4 >
 Q4 /p p Q3 e
+Q3 div > Q3 H>
+Q3 > div Q4 >H
+Q3 div > Q4 >H 
+Q4 < > Q4 e 
+Q4 e > Q4 >
+Q4 /div div Q3 e 
+Q4 em > Q4 H>
+Q3 > 
