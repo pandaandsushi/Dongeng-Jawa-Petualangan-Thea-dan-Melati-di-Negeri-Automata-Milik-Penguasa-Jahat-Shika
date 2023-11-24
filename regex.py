@@ -61,6 +61,8 @@ operators = [
     (r'</em', lambda m: ['<', '/' ,'em'] ),
     (r'<p', lambda m: ['<', 'p'] ),
     (r'</p', lambda m: ['<', '/' ,'p'] ),
+    (r'<abbr', lambda m: ['<', 'abbr'] ),
+    (r'</abbr', lambda m: ['<', '/' ,'abbr'] ),
     (r'<img', lambda m: ['<', 'img'] ),
     (r'<link', lambda m: ['<', 'link'] ),
     (r'<a', lambda m: ['<', 'a'] ),
