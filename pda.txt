@@ -1,6 +1,6 @@
 Q1 Q2 Q3 Q4 Q5 Q6 Q7 Q8 Q9 Q10 Q11 Qdiv Qtemp
 < > / html /html head/head body /body title /title h1 /h1 h2 /h2 h3 /h3 h4 /h4 h5 /h5 h6 /h6 p /p div /div table /table tr /tr td /td th /th hr br small /small strong /strong form /form button /button script /script b /b a /a em /em abbr /abbr img input link class style id src href alt action rel "get" "post" method1 method2 type1 type2 "checkbox" "number" "text" "email" "password" "submit" "reset" "button" = - petik petik2 < > e <!- -> 
-Z I H R " ' < > (Z_I_H_R_adalah_tag_dan_atribut)
+< > / html /html head/head body /body title /title h1 /h1 h2 /h2 h3 /h3 h4 /h4 h5 /h5 h6 /h6 p /p div /div table /table tr /tr td /td th /th hr br small /small strong /strong form /form button /button script /script b /b a /a em /em abbr /abbr img input link class style id src href alt action rel "get" "post" method1 method2 type1 type2 "checkbox" "number" "text" "email" "password" "submit" "reset" "button" = - petik petik2 < > e <!- -> 
 Q0
 Z 
 F
