@@ -125,6 +125,8 @@ operators = [
     (r'\'button', '\'button' ),
     (r'"reset', '"reset' ),
     (r'\'reset', '\'reset' ),
+    (r'<script', 'script' ),
+    (r'/script>', '/script' ),
     (r'"get', '"get' ),
     (r'\'get', '\'get' ),
     (r'"post', '"post' ),
@@ -139,7 +141,6 @@ operators = [
     (r'\'text', '\'text' ),
     (r'"email', '"email' ),
     (r'\'email', '\'email' ),
-
     # (r'<h2', lambda m: ['<', 'h2'] ),
     # (r'</h2', lambda m: ['<', '/' ,'h2'] ),
     # (r'<h3', lambda m: ['<', 'h3'] ),
