@@ -85,7 +85,6 @@ class PDA:
                     if(prevchar == currentchar):
                         currentchar = prevchar
                     if(prevchar=='nextLine' ):
-                        line = line-1
                         inputString[i] = 'e'
                     break
 
