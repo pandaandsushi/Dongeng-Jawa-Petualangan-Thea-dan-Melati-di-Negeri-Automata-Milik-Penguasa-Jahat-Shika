@@ -42,7 +42,6 @@ Q2 class body Q2 IH
 Q2 = class Q3 e
 Q2 title > Q2 H>
 Q2 > title Q3 >H
-Q3 < > Q3 e
 Q3 e > Q3 >
 Q3 /title title Q2 e
 Q2 id title Q2 IH
@@ -190,7 +189,6 @@ Q3 style p Q3 IH
 Q3 class p Q3 IH
 Q3 div > Q3 H>
 Q3 > div Q3 >H
-Q3 < > Q3 e
 Q3 e > Q3 >
 Q3 /div div Q3 e
 Q3 id div Q3 IH
@@ -302,12 +300,10 @@ Q4 petik2 form Q4 "H
 Q4 e petik2 Q4 "
 Q4 petik2 petik2 Q3 e
 Q3 > form Q3 >H
-Q3 < > Q3 e 
 Q3 /form form Q3 e
 Q3 method form Q4 IH
 Q4 = method Q4 e
 Q4 > form Q3 >H
-Q3 /form form Q3 e
 Q4 petik form Q4 'H
 Q4 e petik Q4 '
 Q4 petik petik Q3 
@@ -322,12 +318,12 @@ Q4 'GET' method1 Q3 e
 Q4 "POST" method1 Q3 e
 Q4 'POST' method1 Q3 e
 Q3 > form Q3 >H
-Q3 < > Q3 e
-Q3 /form form Q3 e
 Q3 id form Q3 IH
 Q3 = id Q4 e
 Q3 class form Q3 IH
 Q3 = class Q4 e
+Q3 style form Q3 IH
+Q3 = style Q4 e
 Q2 script > Qtemp H>
 Qtemp src script Qtemp IH
 Qtemp = src Qtemp e
