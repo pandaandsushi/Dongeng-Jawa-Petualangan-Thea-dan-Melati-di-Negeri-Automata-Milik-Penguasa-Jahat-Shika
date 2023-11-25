@@ -23,6 +23,7 @@ class FileHandler:
         states = lines[0].rstrip().split()
         input_symbols = lines[1].rstrip().split()
         stack_symbols = lines[2].rstrip().split()
+        stack_symbols.pop()
         initial_state = lines[3]
         initial_stack = lines[4]
         final_states = lines[5].rstrip().split()
