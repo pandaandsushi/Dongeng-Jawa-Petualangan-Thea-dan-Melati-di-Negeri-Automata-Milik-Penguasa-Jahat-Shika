@@ -124,6 +124,8 @@ operators = [
     (r'\'button', '\'button' ),
     (r'"reset', '"reset' ),
     (r'\'reset', '\'reset' ),
+    (r'<script', 'script' ),
+    (r'/script>', '/script' ),
     # (r'<h2', lambda m: ['<', 'h2'] ),
     # (r'</h2', lambda m: ['<', '/' ,'h2'] ),
     # (r'<h3', lambda m: ['<', 'h3'] ),
