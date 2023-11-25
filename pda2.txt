@@ -307,8 +307,6 @@ Q3 < > Q3 e
 Q3 /form form Q3 e
 Q3 method form Q4 IH
 Q4 = method Q4 e
-Q4 petik2get form Q4 H
-Q4 petik2 petik2get Q3 e
 Q4 > form Q3 >H
 Q3 /form form Q3 e
 Q4 petik form Q4 'H
@@ -316,14 +314,14 @@ Q4 e petik Q4 '
 Q4 petik petik Q3 
 Q3 method1 form Q4 IH
 Q3 method2 form Q4 IH
-Q4 "get" method2 Q3 e
-Q4 'get' method2 Q3 e
-Q4 "post" method2 Q3 e
-Q4 'post' method2 Q3 e
-Q4 "get" method1 Q3 e
-Q4 'get' method1 Q3 e
-Q4 "post" method1 Q3 e
-Q4 'post' method1 Q3 e
+Q4 "GET" method2 Q3 e
+Q4 'GET' method2 Q3 e
+Q4 "POST" method2 Q3 e
+Q4 'POST' method2 Q3 e
+Q4 "GET" method1 Q3 e
+Q4 'GET' method1 Q3 e
+Q4 "POST" method1 Q3 e
+Q4 'POST' method1 Q3 e
 Q3 > form Q3 >H
 Q3 < > Q3 e
 Q3 /form form Q3 e
