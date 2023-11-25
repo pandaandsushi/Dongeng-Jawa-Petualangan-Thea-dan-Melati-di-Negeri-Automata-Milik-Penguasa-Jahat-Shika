@@ -76,6 +76,7 @@ class PDA:
                         elif ((production[4] == 'e') and (len(self.stack) != 1)):
                             self.stack.pop()
                             break
+                        break
                 if(ada==True):
                     previousStackSymbol = currentStackSymbol
                     currentStackSymbol = self.stack[len(self.stack)-1]
