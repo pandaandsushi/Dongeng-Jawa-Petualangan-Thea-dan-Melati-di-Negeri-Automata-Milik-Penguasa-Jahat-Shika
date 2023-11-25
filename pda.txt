@@ -409,6 +409,8 @@ Q4 petik2 input Q4 "H
 Q4 e petik2 Q4 "
 Q3 class input Q3 IH
 Q3 = class Q4 e
+Q3 style input Q3 IH
+Q3 = style Q4 e
 Q6 href link Q6 RL
 Q6 = href Q6 e
 Q6 petik2 link Q7 "<
