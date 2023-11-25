@@ -368,9 +368,9 @@ Q4 src script Q4 IH
 Q4 = src Q4 e
 Q4 petik2 script Q4 "H
 Q4 petik2 petik2 Q4 e
-Q4 > script Q4 >H
-Q4 petik2 > Qdiv >
-Q4 = > Qdiv >
+Q4 > script Qdiv >H
+Qdiv petik2 > Qdiv >
+Qdiv = > Qdiv >
 Qdiv < > Qdiv e 
 Qdiv petik2 > Qdiv >
 Qdiv petik > Qdiv >
