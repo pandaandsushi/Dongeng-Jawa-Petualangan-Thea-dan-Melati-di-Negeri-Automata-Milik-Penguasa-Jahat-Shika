@@ -18,7 +18,7 @@
 
 ## Setting Up 🍀
 - Clone this repository with `git clone https://github.com/pandaandsushi/Dongeng-Jawa-Petualangan-Thea-dan-Melati-di-Negeri-Automata-Milik-Penguasa-Jahat-Shika.git`
-- Open up the terminal and run `python main2.py pda2.txt 'thehtmlfilename'.html`.
+- Open up the terminal and run `python main.py pda.txt 'thehtmlfilename'.html`.
 - You're done!
 
 ### Thank you for trying our HTML Checker, cheers! 
