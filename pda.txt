@@ -312,6 +312,11 @@ Q4 e petik2 Q4 "
 Q4 petik2 petik2 Q3 e
 Q4 petik br Q4 "H
 Q4 e petik Q4 "
+Q4 petik2 hr Q4 "H
+Q4 e petik2 Q4 "
+Q4 petik2 petik2 Q3 e
+Q4 petik hr Q4 "H
+Q4 e petik Q4 "
 Q3 class br Q3 IH
 Q3 = class Q4 e
 Q3 class b Q3 IH
@@ -324,6 +329,12 @@ Q3 id b Q3 IH
 Q3 = id Q4 e
 Q3 id em Q3 IH
 Q3 = id Q4 e
+Q3 class hr Q3 IH
+Q3 = class Q4 e
+Q3 id hr Q3 IH
+Q3 = id Q4 e
+Q3 style hr Q3 IH
+Q3 = style Q4 e
 Q3 style br Q3 IH
 Q3 = style Q4 e
 Q3 style b Q3 IH
