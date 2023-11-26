@@ -77,7 +77,7 @@ class PDA:
                     currentStackSymbol = self.stack[len(self.stack)-1]
                     print('{}\t {}\t {}\t ({}, {})'.format(currentState, inputString[i], previousStackSymbol, currentStackSymbol, self.stack))
                 else:
-                    currentchar = inputString[i]
+                    currentchar = inputString[i-1]
                     if(prevchar == currentchar):
                         currentchar = prevchar
                     if(prevchar=='nextLine'):
