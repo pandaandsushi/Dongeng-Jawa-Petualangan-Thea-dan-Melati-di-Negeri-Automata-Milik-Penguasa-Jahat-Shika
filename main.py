@@ -46,13 +46,12 @@ class PDA:
         productions = parsedLines['productions']
 
         accepted = False
+        end = False
         
         currentchar = ''
         prevchar = ''
         currentStackSymbol = initStackSymbol
         currentState = initialState
-        nextstack=initStackSymbol
-        end = False
 
         print('State\tInput\tStack\tMove')
         print('{}\t {}\t {}\t ({}, {})'.format(currentState, '_', 'Z', currentStackSymbol, self.stack))
@@ -64,6 +63,7 @@ class PDA:
             else:
                 for production in productions:
                     if ((production[0] == currentState) and (production[1] == inputString[i]) and (production[2] == currentStackSymbol)):
+                        prevchar=currentchar
                         currentState = production[3]
                         ada = True
                         if(len(production[4]) > 1):
@@ -77,7 +77,7 @@ class PDA:
                     currentStackSymbol = self.stack[len(self.stack)-1]
                     print('{}\t {}\t {}\t ({}, {})'.format(currentState, inputString[i], previousStackSymbol, currentStackSymbol, self.stack))
                 else:
-                    currentchar = inputString[i-1]
+                    currentchar = inputString[i]
                     if(prevchar == currentchar):
                         currentchar = prevchar
                     if(prevchar=='nextLine'):
